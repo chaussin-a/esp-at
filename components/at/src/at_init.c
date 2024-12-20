@@ -85,7 +85,7 @@ static void at_module_init(void)
 #endif
 
     ret = snprintf((char *)version + ret, AT_TEMP_BUFFER_SIZE - ret,
-                   "Bin version:%s(%s)\r\n", CONFIG_ESP_AT_FW_VERSION, esp_at_get_current_module_name());
+                   "Bin version:GP-%s(%s)\r\n", CONFIG_ESP_AT_FW_VERSION, esp_at_get_current_module_name());
 #endif
 
 #if CONFIG_AT_DEBUG
