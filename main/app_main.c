@@ -97,7 +97,7 @@ void app_main(void)
 #ifdef CONFIG_ESP_AT_FW_VERSION
     if ((strlen(CONFIG_ESP_AT_FW_VERSION) > 0) && (strlen(CONFIG_ESP_AT_FW_VERSION) <= 128)){
         printf("%s\r\n", CONFIG_ESP_AT_FW_VERSION);
-        sprintf((char*)version + strlen((char*)version),"Bin version:%s(%s)\r\n", CONFIG_ESP_AT_FW_VERSION, esp_at_get_current_module_name());
+        sprintf((char*)version + strlen((char*)version),"Bin version:GP-%s(%s)\r\n", CONFIG_ESP_AT_FW_VERSION, esp_at_get_current_module_name());
     }
 #endif
     esp_at_module_init(CONFIG_AT_SOCKET_MAX_CONN_NUM, version);  // reserved one for server
